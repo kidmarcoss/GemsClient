@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GemsClient | El Cliente Definitivo</title>
     
-    <!-- SCRIPT DE GOOGLE ADSENSE (Reemplaza los XXXXXX con tu ID real de Publisher) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <!-- SCRIPT DE GOOGLE ADSENSE VINCULADO A TU CUENTA -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9432514958145337" crossorigin="anonymous"></script>
 
     <style>
         :root {
@@ -19,7 +19,6 @@
 
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; }
 
-        /* Fondo técnico */
         .grid-bg { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px); background-size: 40px 40px; z-index: -1; }
 
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(5, 7, 10, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 240, 255, 0.1); position: sticky; top: 0; z-index: 100; }
@@ -34,46 +33,26 @@
         .download-btn { background: rgba(0, 240, 255, 0.1); color: var(--cyan-neon); border: 2px solid var(--cyan-neon); padding: 20px 60px; font-size: 22px; font-weight: 900; border-radius: 8px; cursor: pointer; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2); }
         .download-btn:hover { background: var(--cyan-neon); color: var(--bg-dark); box-shadow: 0 0 40px rgba(0, 240, 255, 0.6); transform: translateY(-5px); }
 
-        /* SECCIÓN: Galería de Imágenes */
         .gallery-section { padding: 80px 50px; text-align: center; max-width: 1200px; margin: 0 auto; }
         .gallery-title { font-size: 32px; color: var(--text-main); margin-bottom: 50px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
         .gallery-title span { color: var(--cyan-neon); text-shadow: 0 0 10px rgba(0, 240, 255, 0.3); }
         
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
         .gallery-item { background: var(--bg-light); border: 1px solid rgba(0, 240, 255, 0.1); border-radius: 12px; overflow: hidden; transition: all 0.4s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
         .gallery-item:hover { transform: translateY(-10px); border-color: var(--cyan-neon); box-shadow: 0 15px 30px rgba(0, 240, 255, 0.2); }
-        
         .gallery-item img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid rgba(0, 240, 255, 0.1); transition: transform 0.4s ease; }
-        .gallery-item:hover img { transform: scale(1.03); }
         
         .caption { padding: 20px; font-weight: 900; color: var(--text-main); letter-spacing: 1px; text-transform: uppercase; font-size: 16px; }
         .caption span { color: var(--cyan-neon); }
 
         .features { padding: 20px 50px 40px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .feature-card { background: var(--bg-light); border: 1px solid rgba(0, 240, 255, 0.1); padding: 40px 30px; border-radius: 12px; width: 300px; text-align: center; transition: transform 0.3s ease, border-color 0.3s ease; }
-        .feature-card:hover { transform: translateY(-10px); border-color: var(--cyan-neon); box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1); }
-        .feature-icon { font-size: 40px; margin-bottom: 20px; }
+        .feature-card { background: var(--bg-light); border: 1px solid rgba(0, 240, 255, 0.1); padding: 40px 30px; border-radius: 12px; width: 300px; text-align: center; transition: transform 0.3s ease; }
+        .feature-card:hover { transform: translateY(-10px); border-color: var(--cyan-neon); }
         .feature-title { font-size: 22px; font-weight: bold; margin-bottom: 15px; color: var(--cyan-neon); }
         .feature-desc { color: var(--text-muted); line-height: 1.6; font-size: 15px; }
 
-        /* ESTILOS PARA EL CONTENEDOR DE ANUNCIOS */
-        .ad-container {
-            max-width: 900px;
-            margin: 20px auto 60px;
-            padding: 10px;
-            background: rgba(13, 17, 23, 0.5);
-            border: 1px dashed rgba(0, 240, 255, 0.2);
-            border-radius: 8px;
-            text-align: center;
-        }
-        .ad-label {
-            font-size: 10px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
+        .ad-container { max-width: 900px; margin: 20px auto 60px; padding: 10px; background: rgba(13, 17, 23, 0.5); border: 1px dashed rgba(0, 240, 255, 0.2); border-radius: 8px; text-align: center; }
+        .ad-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
 
         footer { text-align: center; padding: 30px; background: rgba(5, 7, 10, 0.9); border-top: 1px solid rgba(0, 240, 255, 0.1); color: var(--text-muted); font-size: 14px; }
         footer span { color: var(--cyan-neon); font-weight: bold; }
@@ -85,62 +64,42 @@
 
     <nav>
         <div class="nav-logo">
-            <img src="./logo.svg" alt="GemsClient Logo" onerror="this.src='./logo.png'">
+            <img src="./logo.svg" alt="GemsClient Logo">
             GemsClient
         </div>
     </nav>
 
     <div class="hero">
         <h1>Optimización <span>Extrema</span>.</h1>
-        <p>Aumenta tus FPS, personaliza tu experiencia y domina el juego. El cliente diseñado para el máximo rendimiento en Vanilla y servidores competitivos.</p>
+        <p>Aumenta tus FPS, personaliza tu experiencia y domina el juego. El cliente diseñado por <span>Kidmarcoss</span> para el máximo rendimiento.</p>
         <a href="#descargar" class="download-btn">Descargar para Windows</a>
     </div>
 
-    <!-- SECCIÓN DE GALERÍA -->
     <div class="gallery-section">
         <div class="gallery-title">Vistazo al <span>GemsClient</span></div>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="./1.png" alt="Interfaz del Launcher">
+                <img src="./1.png" alt="Launcher">
                 <div class="caption">Launcher <span>Premium</span></div>
             </div>
             <div class="gallery-item">
-                <img src="./2.png" alt="Ajustes de Juego">
+                <img src="./2.png" alt="Ajustes">
                 <div class="caption">Ajustes <span>Optimizados</span></div>
             </div>
             <div class="gallery-item">
-                <img src="./3.png" alt="Ajustes Generales">
+                <img src="./3.png" alt="General">
                 <div class="caption">Control <span>Total</span></div>
             </div>
         </div>
     </div>
 
-    <div class="features">
-        <div class="feature-card">
-            <div class="feature-icon">🚀</div>
-            <div class="feature-title">FPS Boost Integrado</div>
-            <div class="feature-desc">Incluye Sodium nativamente preconfigurado para sacarle hasta la última gota de rendimiento a tu PC.</div>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🎮</div>
-            <div class="feature-title">Multi-Versión</div>
-            <div class="feature-desc">Pasa de un PvP clásico en la 1.8.9 a explorar las nuevas cuevas en la última versión con un solo clic.</div>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <div class="feature-title">Interfaz Limpia</div>
-            <div class="feature-desc">Diseño minimalista y moderno sin distracciones. Inicia el juego en segundos, sin consumir memoria extra.</div>
-        </div>
-    </div>
-
-    <!-- BLOQUE DE PUBLICIDAD GOOGLE ADSENSE -->
+    <!-- SECCIÓN DE PUBLICIDAD CON TU ID REAL -->
     <div class="ad-container">
         <div class="ad-label">Publicidad</div>
-        <!-- Reemplaza los XXXXXX e YYYYYY con tus datos de AdSense -->
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="YYYYYYYYYY"
+             data-ad-client="ca-pub-9432514958145337"
+             data-ad-slot="auto"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>
